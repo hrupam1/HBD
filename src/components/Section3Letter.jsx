@@ -36,10 +36,10 @@ const Section3Letter = () => {
           position: 'relative',
           width: '90%',
           maxWidth: '550px',
-          height: '350px',
+          height: 'clamp(250px, 60vw, 350px)',
           cursor: isOpen ? 'default' : 'pointer',
           perspective: '1200px',
-          marginTop: isOpen ? '250px' : '0px', 
+          marginTop: isOpen ? 'clamp(150px, 40vw, 250px)' : '0px', 
           marginBottom: isOpen ? '50px' : '0px',
           transition: 'all 0.8s ease',
           margin: '0 auto'
@@ -125,10 +125,10 @@ const Section3Letter = () => {
             position: 'absolute',
             width: '84%',
             left: '8%',
-            height: '500px',
+            height: 'clamp(300px, 70vh, 500px)',
             background: '#fcf1d8', // Cream paper
             borderRadius: '15px',
-            padding: '2.5rem',
+            padding: 'clamp(1.5rem, 5vw, 2.5rem)',
             boxShadow: '0 15px 35px rgba(0,0,0,0.2)',
             overflowY: 'auto',
             border: '3px dashed #d59b6a'

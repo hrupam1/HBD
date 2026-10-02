@@ -13,7 +13,7 @@ const Section4Gallery = () => {
 
   return (
     <div className="section">
-      <h2 style={{ fontSize: '3rem', color: 'var(--accent-gold)', marginBottom: '4rem', textAlign: 'center' }}>
+      <h2 style={{ fontSize: 'clamp(1.8rem, 5vw, 3rem)', color: 'var(--accent-gold)', marginBottom: '4rem', textAlign: 'center', padding: '0 1rem' }}>
         Moments I Want to Remember Forever
       </h2>
       

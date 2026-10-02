@@ -202,3 +202,31 @@ button {
 .flex-col { flex-direction: column; }
 .items-center { align-items: center; }
 .justify-center { justify-content: center; }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  /* General fixes */
+  .section { padding: 3rem 1rem; }
+  
+  /* Timeline responsive */
+  .timeline-row {
+    justify-content: flex-end !important;
+  }
+  .timeline-content {
+    width: 85% !important;
+    text-align: left !important;
+    padding: 1.5rem !important;
+  }
+  .timeline-line {
+    left: 20px !important;
+    transform: translateX(0) !important;
+  }
+  .timeline-dot {
+    left: 11px !important;
+    transform: translateX(0) !important;
+  }
+  .timeline-ball {
+    left: 20px !important;
+    transform: translateX(0) translateY(-50%) !important;
+  }
+}

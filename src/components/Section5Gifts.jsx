@@ -41,7 +41,7 @@ const Section5Gifts = ({ onComplete }) => {
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        style={{ fontSize: '3.5rem', color: 'var(--accent-gold)', marginBottom: '5rem', textShadow: '0 0 20px rgba(212, 175, 55, 0.5)' }}
+        style={{ fontSize: 'clamp(2rem, 6vw, 3.5rem)', color: 'var(--accent-gold)', marginBottom: '5rem', textShadow: '0 0 20px rgba(212, 175, 55, 0.5)', padding: '0 1rem' }}
       >
         Interactive Gifts 🎁
       </motion.h2>
@@ -62,7 +62,8 @@ const Section5Gifts = ({ onComplete }) => {
               style={{ 
                 padding: '2.5rem', 
                 borderRadius: '2rem',
-                width: '320px',
+                width: '100%',
+                maxWidth: '320px',
                 minHeight: '260px',
                 display: 'flex',
                 flexDirection: 'column',

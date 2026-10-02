@@ -36,7 +36,7 @@ const Section2Timeline = () => {
       
       <div style={{ maxWidth: '900px', width: '100%', position: 'relative', margin: '0 auto', paddingBottom: '100px' }}>
         {/* Background Track for the line */}
-        <div style={{
+        <div className="timeline-line" style={{
             position: 'absolute',
             left: '50%',
             top: 0,
@@ -49,6 +49,7 @@ const Section2Timeline = () => {
 
         {/* Dynamic Scroll-driven Timeline Line */}
         <motion.div 
+          className="timeline-line"
           style={{
             position: 'absolute',
             left: '50%',
@@ -64,6 +65,7 @@ const Section2Timeline = () => {
 
         {/* Glowing Orb tracing the line */}
         <motion.div
+          className="timeline-ball"
           style={{
             position: 'absolute',
             left: '50%',
@@ -82,7 +84,7 @@ const Section2Timeline = () => {
           const isEven = index % 2 === 0;
           
           return (
-          <div key={index} style={{
+          <div key={index} className="timeline-row" style={{
             display: 'flex',
             justifyContent: isEven ? 'flex-start' : 'flex-end',
             marginBottom: '6rem',
@@ -91,6 +93,7 @@ const Section2Timeline = () => {
           }}>
             {/* Timeline Dot (Static base) */}
             <motion.div 
+              className="timeline-dot"
               initial={{ scale: 0, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.2 }}
@@ -114,7 +117,7 @@ const Section2Timeline = () => {
             <motion.div 
               initial={{ 
                 opacity: 0, 
-                x: isEven ? -150 : 150,
+                x: isEven ? -100 : 100,
                 rotateY: isEven ? 45 : -45,
                 scale: 0.8
               }}
@@ -131,7 +134,7 @@ const Section2Timeline = () => {
                 delay: 0.1
               }}
               viewport={{ once: true, margin: "-150px" }}
-              className="glass" 
+              className="glass timeline-content" 
               style={{
                 width: '45%',
                 padding: '2.5rem',

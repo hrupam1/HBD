@@ -130,16 +130,16 @@ const FinalSurprise = () => {
               initial={{ scale: 0, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ type: 'spring', bounce: 0.5, duration: 1 }}
-              style={{ zIndex: 10 }}
+              style={{ zIndex: 10, padding: '0 1rem' }}
             >
               <motion.h1 
                 animate={{ scale: [1, 1.05, 1] }}
                 transition={{ duration: 2, repeat: Infinity }}
-                style={{ fontSize: '6rem', color: 'var(--accent-gold)', marginBottom: '2rem', fontFamily: 'var(--font-serif)', textShadow: '0 0 30px rgba(212, 175, 55, 0.8)' }}
+                style={{ fontSize: 'clamp(3rem, 10vw, 6rem)', color: 'var(--accent-gold)', marginBottom: '2rem', fontFamily: 'var(--font-serif)', textShadow: '0 0 30px rgba(212, 175, 55, 0.8)' }}
               >
                 I knew it! ❤️💍
               </motion.h1>
-              <h2 style={{ fontSize: '3rem', color: '#ffb3c1', textShadow: '0 0 15px rgba(255,179,193,0.5)' }}>
+              <h2 style={{ fontSize: 'clamp(1.8rem, 6vw, 3rem)', color: '#ffb3c1', textShadow: '0 0 15px rgba(255,179,193,0.5)' }}>
                 I love you forever!
               </h2>
             </motion.div>
@@ -156,25 +156,27 @@ const FinalSurprise = () => {
                 backdropFilter: 'blur(12px)',
                 border: '2px solid rgba(255, 77, 109, 0.3)',
                 borderRadius: '40px',
-                padding: '4rem 6rem',
+                padding: 'clamp(2rem, 5vw, 4rem) clamp(1rem, 5vw, 6rem)',
                 boxShadow: '0 25px 50px rgba(0,0,0,0.5), inset 0 0 30px rgba(255, 77, 109, 0.1)',
                 display: 'flex', 
                 flexDirection: 'column', 
                 alignItems: 'center', 
-                justifyContent: 'center' 
+                justifyContent: 'center',
+                width: '90%',
+                maxWidth: '800px'
               }}
             >
               <motion.div 
                 animate={{ y: [-5, 5, -5] }}
                 transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-                style={{ textAlign: 'center', marginBottom: '4rem' }}
+                style={{ textAlign: 'center', marginBottom: '3rem' }}
               >
-                <h1 style={{ fontSize: '4.5rem', color: '#ffb3c1', margin: 0, fontFamily: 'var(--font-serif)', textShadow: '0 0 20px rgba(255, 77, 109, 0.6)' }}>
+                <h1 style={{ fontSize: 'clamp(2.5rem, 8vw, 4.5rem)', color: '#ffb3c1', margin: 0, fontFamily: 'var(--font-serif)', textShadow: '0 0 20px rgba(255, 77, 109, 0.6)', lineHeight: 1.2 }}>
                   Will we be 3 babies? 🥺🍼
                 </h1>
               </motion.div>
               
-              <div style={{ display: 'flex', gap: '4rem', alignItems: 'center', position: 'relative', justifyContent: 'center', height: '80px', width: '100%' }}>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '2rem', alignItems: 'center', position: 'relative', justifyContent: 'center', width: '100%' }}>
                 
                 <motion.button 
                   onClick={handleYesClick}
@@ -183,8 +185,8 @@ const FinalSurprise = () => {
                   animate={{ boxShadow: ['0 0 15px rgba(74,222,128,0.4)', '0 0 35px rgba(74,222,128,0.8)', '0 0 15px rgba(74,222,128,0.4)'] }}
                   transition={{ duration: 2, repeat: Infinity }}
                   style={{
-                    padding: '1.2rem 4rem',
-                    fontSize: '2rem',
+                    padding: 'clamp(0.8rem, 3vw, 1.2rem) clamp(2rem, 6vw, 4rem)',
+                    fontSize: 'clamp(1.5rem, 4vw, 2rem)',
                     background: 'linear-gradient(135deg, #4ade80, #16a34a)',
                     color: 'white',
                     border: 'none',
@@ -207,8 +209,8 @@ const FinalSurprise = () => {
                   style={{
                     position: 'relative',
                     zIndex: 5,
-                    padding: '5rem', // Invisible force field!
-                    margin: '-5rem', // Offset padding so layout doesn't break
+                    padding: '3rem', // Force field slightly smaller for mobile friendliness
+                    margin: '-3rem',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
@@ -217,15 +219,15 @@ const FinalSurprise = () => {
                 >
                   <button 
                     style={{
-                      padding: '1.2rem 4rem',
-                      fontSize: '2rem',
+                      padding: 'clamp(0.8rem, 3vw, 1.2rem) clamp(2rem, 6vw, 4rem)',
+                      fontSize: 'clamp(1.5rem, 4vw, 2rem)',
                       background: 'linear-gradient(135deg, #f87171, #dc2626)',
                       color: 'white',
                       border: 'none',
                       borderRadius: '40px',
                       fontWeight: 'bold',
                       boxShadow: '0 8px 25px rgba(248, 113, 113, 0.5)',
-                      pointerEvents: 'none' // Wrapper handles the hover events
+                      pointerEvents: 'none'
                     }}
                   >
                     No 🥺
